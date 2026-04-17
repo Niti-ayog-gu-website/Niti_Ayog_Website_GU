@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
 const NAV_PUBLIC = ["Home", "Login"];
-const NAV_ADMIN  = ["Home", "Students", "Alumni"];
+const NAV_ADMIN  = ["Home", "Students", "Alumni", "Research"];
 
 export default function Navbar({ currentPage, setPage }) {
   // state variables
@@ -231,6 +231,9 @@ export default function Navbar({ currentPage, setPage }) {
     objectFit: "contain",
   }}
 />  
+
+
+
           <span className="nav-logo-text" style={{ color: solid ? "#0F172A" : "#0F172A" }}>
               SkillMap<span className="org"> Goa</span>
             </span>
@@ -242,6 +245,10 @@ export default function Navbar({ currentPage, setPage }) {
                 <span className="adot" /> Admin
               </span>
             )}
+
+
+
+
 
             {links.map(label => {
               const active = currentPage === label;

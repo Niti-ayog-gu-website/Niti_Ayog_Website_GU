@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import StudentDashboard from "./pages/StudentDashboard";
 import AlumniDashboard from "./pages/AlumniDashboard";
+import ResearchDashboard from "./pages/ResearchDashboard";
 
 export default function App() {
   const [page, setPage] = useState("Home");
@@ -15,6 +16,7 @@ export default function App() {
       case "Login":     return <Login setPage={setPage} />;
       case "Students":  return <StudentDashboard />;
       case "Alumni":    return <AlumniDashboard />;
+      case "Research":    return <ResearchDashboard />;
       default:          return <Home setPage={setPage} />;
     }
   };
