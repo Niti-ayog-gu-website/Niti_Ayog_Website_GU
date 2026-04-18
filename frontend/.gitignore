@@ -23,5 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 backend/config/serviceAccount.json
-backend/.env
-.env
