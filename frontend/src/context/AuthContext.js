@@ -2,8 +2,8 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext(null);
 
-const BASE_URL = "http://localhost:5000/api";
-
+// const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = process.env.REACT_APP_API_URL + "/api";
 export function AuthProvider({ children }) {
   const [isAdmin, setIsAdmin]   = useState(false);
   const [admin, setAdmin]       = useState(null);
