@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
 const NAV_PUBLIC = ["Home", "Login"];
-const NAV_ADMIN  = ["Home", "Students", "Alumni", "Research"];
+const NAV_ADMIN  = ["Home", "Students", "Alumni", "Research","Industry"];
 
 export default function Navbar({ currentPage, setPage }) {
   // state variables
