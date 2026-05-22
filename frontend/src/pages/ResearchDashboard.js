@@ -389,13 +389,13 @@ export default function ResearchDashboard() {
                   rawData={workData} />
 
                 {/* Row 5 — full width year trend */}
-                <div style={{ gridColumn:"1 / -1" }}>
+                {/* <div style={{ gridColumn:"1 / -1" }}>
                   <BarCard
                     title="Respondents by Year"
                     subtitle="Survey / graduation year trend"
                     rawData={yearData}
                     layout="vertical-x" />
-                </div>
+                </div> */}
 
               </div>
             </>
