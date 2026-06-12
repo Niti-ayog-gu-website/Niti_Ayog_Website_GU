@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import DataTable, { Badge } from "../components/DataTable";
-// import CategoryChart  from "../components/charts/CategoryChart";
-// import DisciplineChart from "../components/charts/DisciplineChart";
-// import GenderChart    from "../components/charts/GenderChart";
-// import SectorChart    from "../components/charts/SectorChart";
-// import SkillsChart    from "../components/charts/SkillsChart";
+import CategoryChart  from "../components/charts/CategoryChart";
+import DisciplineChart from "../components/charts/DisciplineChart";
+import GenderChart    from "../components/charts/GenderChart";
+import SectorChart    from "../components/charts/SectorChart";
+import SkillsChart    from "../components/charts/SkillsChart";
 
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,800;1,9..144,700&display=swap');
