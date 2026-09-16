@@ -18,7 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', require('./routes/adminRoutes')); 
 app.use('/api', require('./routes/studentRoutes'));
-app.use('/api', require('./routes/alumniRoutes')); 
+app.use('/api', require('./routes/alumniRoutes'));
+app.use('/api', require('./routes/uploadRoutes')); 
 
 app.get('/', (req, res) => {
   res.json({ status: 'Student Management API is running' });
