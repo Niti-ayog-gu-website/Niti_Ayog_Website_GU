@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth, BASE_URL } from "../context/AuthContext";
 import DataTable, { Badge } from "../components/DataTable";
 import * as XLSX from "xlsx";
 import {
@@ -718,7 +718,7 @@ function UploadWizard({ onClose, onSuccess }) {
       form.append("type", "admission");
 
       const res  = await fetch(
-        `/api/upload/preview`,
+        `${BASE_URL}/upload/preview`,
         { method:"POST", headers:{ Authorization:`Bearer ${token}` }, body:form }
       );
       const data = await res.json();
@@ -1015,7 +1015,7 @@ export default function GUStudentsDashboard() {
       setLoading(true);
       setError("");
       const token = localStorage.getItem("skillmap_token");
-      const res = await fetch("/api/export/admission", {
+      const res = await fetch(`${BASE_URL}/export/admission`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.status === 404) {
@@ -1045,7 +1045,7 @@ export default function GUStudentsDashboard() {
     setExporting(true);
     try {
       const token = localStorage.getItem("skillmap_token");
-      const res   = await fetch("/api/export/admission", {
+      const res   = await fetch(`${BASE_URL}/export/admission`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Export failed");
